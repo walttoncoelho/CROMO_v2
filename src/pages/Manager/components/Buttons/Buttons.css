@@ -1,0 +1,130 @@
+/* Button Sucess One */
+
+.ButtonSucessOne {
+    width: 140px;
+    height: 45px;
+    display: flex;
+    cursor: pointer;
+    color: #FFFFFF;
+    border-style: none;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    background-color: #1A60C3;
+}
+
+.ButtonSucessOne:hover {
+    background-color: #174585;
+    font-weight: bold;
+}
+
+.ButtonDisableOne {
+    width: 140px;
+    height: 45px;
+    display: flex;
+    cursor: pointer;
+    color: #757575;
+    border-style: none;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9D9D9;
+}
+/* Button Sucess Two */
+
+.ButtonSucessTwo {
+    width: 140px;
+    height: 45px;
+    display: flex;
+    cursor: pointer;
+    color: #1A60C3;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #1A60C3; 
+}
+
+.ButtonSucessTwo:hover {
+    color: #17417D;
+    font-weight: bold;
+    border: 2px solid #17417D;
+}
+
+.ButtonDisableTwo {
+    width: 140px;
+    height: 45px;
+    display: flex;
+    cursor: pointer;
+    color: #D9D9D9;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #D9D9D9; 
+}
+
+/* Button Attention One */
+
+.ButtonAttentionOne {
+    width: 140px;
+    height: 45px;
+    display: flex;
+    cursor: pointer;
+    color: #FFFFFF;
+    border-radius: 4px;
+    border-style: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #D83939;
+}
+
+.ButtonAttentionOne:hover {
+    font-weight: bold;
+    background-color: #A72B2B;
+}
+
+.ButtonAttentionOneDisable {
+    width: 140px;
+    height: 45px;
+    display: flex;
+    cursor: pointer;
+    color: #FFFFFF;
+    border-radius: 4px;
+    border-style: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #D8393980;
+}
+/* Button Attention Two */
+
+.ButtonAttentionTwo {
+    width: 140px;
+    height: 45px;
+    display: flex;
+    cursor: pointer;
+    color: #D83939;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #D83939; 
+}
+
+.ButtonAttentionTwo:hover {
+    color: #A72B2B;
+    font-weight: bold;
+    border: 2px solid #A72B2B; 
+}
+
+.ButtonAttentionTwoDisable {
+    width: 140px;
+    height: 45px;
+    display: flex;
+    cursor: pointer;
+    color: #D8393980;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #D8393980;
+}
+
+
+

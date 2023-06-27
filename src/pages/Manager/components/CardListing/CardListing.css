@@ -1,0 +1,76 @@
+/* * {
+    margin: 0;
+}
+
+.CardListing {
+    height: 510px;
+    width: 1026px;
+    max-width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #F6F7FB;
+    color: #21559D;
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    max-width: 100%; 
+}
+
+.TableOver {
+    overflow-x: auto;
+}
+
+.Cabecalho {
+    height: 63px;
+    border-bottom: 1px solid #21559D80;
+    display: flex;
+    align-items: center;
+    padding: 0px 29px;
+    font-weight: 700;
+}
+
+.Cabecalho label {
+    padding: 0px 7px;
+}
+
+.inputExibirItens[type=text] {
+    height: 34px;
+    width: 66px;
+    color: #21559D;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 0px 15px;
+    font-size: 16px;
+    border: 1px solid #21559D;
+}
+
+td {
+    padding: 10px 0px ;
+    text-align: center;
+}
+
+th {
+    font-weight: 700;
+    padding: 14px 95px 21px 90px;
+    max-width: 100%;
+    text-align: center;
+    font-size: 16px;
+} 
+
+tr:nth-child(even) {
+    background-color: #D8E3F133;
+}
+
+tbody>tr>:nth-child(3) {
+    background-color: #D8E3F180;
+}
+
+tbody>tr>:nth-child(1) {
+    text-align: start;
+    padding: 0px 145px 0px 33px;
+} */
+
+
+
+

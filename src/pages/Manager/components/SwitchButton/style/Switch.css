@@ -1,0 +1,18 @@
+/* Aqui esta a interacao do botao */
+  .input:checked + .slider::before {
+    background-color: #1A60C3;
+    
+  }
+  
+  .input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  .input:checked + .slider:before  {
+    -webkit-transform: translateX(66px);
+    -ms-transform: translateX(66px);
+    transform: translateX(66px);
+  }
+
+
+

@@ -1,0 +1,103 @@
+/* Placeholder */
+.Placeholder[type=text] {
+    width: 365px;
+    height: 45px;
+    background: #93a5ed;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid #BCBCBC;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.Placeholder::placeholder {
+    padding: 27px;
+    color: #BCBCBC;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Placeholder Active */
+
+.PlaceholderActive[type=text] {
+    width: 365px;
+    height: 45px;
+    background: #EEF0F8;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid #3B70BB80;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.PlaceholderActive::placeholder {
+    padding: 27px;
+    color: #1A60C3;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Placeholder Error */
+
+.PlaceholderError[type=text] {
+    width: 365px;
+    height: 45px;
+    background: #D8393933;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid #D8393933;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.PlaceholderError::placeholder {
+    padding: 27px;
+    color: #D83939;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Placeholder sem Fundo */
+
+.PlaceholderTwo[type=text] {
+    width: 365px;
+    height: 45px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid #1A60C3;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.PlaceholderTwo::placeholder {
+    padding: 27px;
+    color: #BEC1C6;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Placeholder sem Fundo Active */
+
+.PlaceholderTwoActive[type=text] {
+    width: 365px;
+    height: 45px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 2px solid #1A60C3;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.PlaceholderTwoActive::placeholder {
+    padding: 27px;
+    color: #1A60C3;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Placeholder sem Fundo Error */
+
+.PlaceholderTwoError[type=text] {
+    width: 365px;
+    height: 45px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid #D83939;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.PlaceholderTwoError::placeholder {
+    padding: 27px;
+    color: #D83939;
+    font-family: 'Ubuntu', sans-serif;
+}

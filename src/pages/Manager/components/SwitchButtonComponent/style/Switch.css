@@ -1,0 +1,14 @@
+/* Aqui esta a interacao do botao */
+  .inputComponent:checked + .sliderComponent::before {
+    background-color: #D9D9D9;
+  }
+  
+  .inputComponent:focus + .sliderComponent {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  .inputComponent:checked + .sliderComponent:before {
+    -webkit-transform: translateX(34px);
+    -ms-transform: translateX(34px);
+    transform: translateX(34px);
+  }

@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+}
+
+.FormGeral {
+    box-sizing: border-box;
+    width: 1026px;
+    max-width: 100%;
+    height: 439px;
+}
+
+.Form {
+    display: grid;
+    width: 1026px;
+    max-width: 100%;
+    height: 439px;
+    grid-template-areas: 
+    'dep  solici'
+    'assu solici'
+    'anex solici' 
+    'boto boto'
+    ;
+    background-color: #F6F7FB;
+    box-sizing: border-box;
+    padding: 17px 33px 11px 33px;
+    border-radius: 8px;
+}
+
+.AbrirChamado {
+    height: 63px;
+    width: 1026px;
+    max-width: 100%;
+    color: #21559D;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 22px 0px 23px 29px;
+    border-bottom: 1px solid #21559D80;
+    box-sizing: border-box;
+    background-color: #F6F7FB;
+}
+
+textarea {
+    resize: none
+}
+
+input[type='file'] {
+    display: none;
+}
+
+.labelAnexar {
+    background-color: #3498db;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    color: #21559D;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.botoes {
+    display: flex;
+    grid-area: boto;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.assunto {
+    grid-area: assu;
+    display: flex;
+    flex-direction: column;
+    color: #21559D;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.anexar {
+    grid-area: anex;
+    display: flex;
+    flex-direction: column;
+}
+
+.departamento {
+    grid-area: dep;
+    display: flex;
+    flex-direction: column;
+    color: #21559D;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.anexarLabel {
+    display: flex;
+    gap: 11px;
+    margin-bottom: 14px;
+}
+
+.solici {
+    grid-area: solici;
+    display: flex;
+    flex-direction: column;
+}
+
+.PlaceholderAnexar {
+    border: 1px solid #1A60C3;
+    border-radius: 4px;
+    padding: 0px 4px;
+}
+
+.PlaceholderAnexar::placeholder {
+    color: #BEC1C6;
+    text-align: center;
+}
+
+.LabelAnexar {
+    color: #21559D;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.LabelSolicitacoes {
+    color: #21559D;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.textArea {
+    width: 382px;
+    max-width: 100%;
+    border: 1px solid #1A60C3;
+    border-radius: 4px;
+    padding: 20px 0px 0px 14px;
+    margin-bottom: 6px;
+}
+
+.textArea::placeholder {
+    color: #BEC1C6;
+    font-size: 14px;
+}
