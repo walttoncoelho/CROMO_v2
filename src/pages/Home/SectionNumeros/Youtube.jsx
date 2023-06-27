@@ -12,3 +12,4 @@ export default function Youtube() {
     
   )
 }
+// Transformar em página dinâmica
