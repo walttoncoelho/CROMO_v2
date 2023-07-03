@@ -7,7 +7,7 @@ export default function BannerPrincipal() {
   const [bannerData, setBannerData] = useState(null);
 
   useEffect(() => {
-    fetch(`${API_BASE_URL}/api/banner-topos/3/?populate=*`)
+    fetch(`${API_BASE_URL}/api/banner-topos/1/?populate=*`)
       .then(response => response.json())
       .then(data => setBannerData(data.data.attributes))
       .catch(error => console.error(error));
