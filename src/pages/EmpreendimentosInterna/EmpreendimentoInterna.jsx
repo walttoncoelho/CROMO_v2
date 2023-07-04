@@ -6,7 +6,16 @@ import ButtonContact from "../../components/ButtonContact/ButtonContact";
 import GoogleMapReact from 'google-map-react';
 
 import { API_BASE_URL } from '../../../src/data/api/api';
-import { ContainerDescription, ContainerHeader, ContainerIcons, ContainerPlanta, ContainerSobre, SectionDescription, SectionGalery, SobreStyleText } from './Style';
+import {
+  ContainerDescription,
+  ContainerHeader,
+  ContainerIcons,
+  ContainerPlanta,
+  ContainerSobre,
+  SectionDescription,
+  SectionGalery,
+  SobreStyleText
+} from './Style';
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -25,19 +34,18 @@ export default function EmpreendimentoInterna() {
   useEffect(() => {
     async function fetchEmpreendimentoData() {
       try {
-        const empreendimentoId = id;
-        const response = await fetch(`${API_BASE_URL}/api/empreendimentos/${empreendimentoId}/?populate=*`);
+        const response = await fetch(`${API_BASE_URL}/api/empreendimentos/${id}/?populate=*`);
         const data = await response.json();
         if (response.ok && data && data.data && data.data.attributes) {
-          const { latitude, longitude } = data.data.attributes;
-          setEmpreendimento(data.data.attributes);
+          const { latitude, longitude, ...empreendimentoData } = data.data.attributes;
+          setEmpreendimento(empreendimentoData);
           setLatitude(latitude);
           setLongitude(longitude);
         } else {
-          setError('Falha ao obter os dados do empreendimento.');
+          setError('Failed to fetch empreendimento data.');
         }
       } catch (error) {
-        setError('Ocorreu um erro na requisição.');
+        setError('An error occurred while making the request.');
         console.error(error);
       } finally {
         setIsLoading(false);
@@ -46,15 +54,15 @@ export default function EmpreendimentoInterna() {
 
     async function fetchInfraestruturasData() {
       try {
-        const response = await fetch(`${API_BASE_URL}/api/infraesctruturas?populate=*`);
+        const response = await fetch(`${API_BASE_URL}/api/infraestruturas?populate=*`);
         const data = await response.json();
         if (response.ok && data && data.data) {
           setInfraestruturas(data.data);
         } else {
-          setError('Falha ao obter os dados de infraestruturas.');
+          setError('Failed to fetch infraestruturas data.');
         }
       } catch (error) {
-        setError('Ocorreu um erro na requisição de infraestruturas.');
+        setError('An error occurred while making the request for infraestruturas.');
         console.error(error);
       }
     }
@@ -85,13 +93,18 @@ export default function EmpreendimentoInterna() {
       <>
         <Navbar />
         <ContainerHeader>
+        {logo_empreendimento && logo_empreendimento.data && (
           <img src={`${API_BASE_URL}${logo_empreendimento.data.attributes.url}`} alt="Logo do empreendimento" />
-        </ContainerHeader>
+        )}
+      </ContainerHeader>
         <SectionDescription>
-        <ContainerPlanta>
-            {planta_baixa && planta_baixa.data && planta_baixa.data.attributes && planta_baixa.data.attributes.formats.large &&
-              <img src={`${API_BASE_URL}${planta_baixa.data.attributes.formats.large.url}`} alt="Planta Baixa" />
-            }
+          <ContainerPlanta>
+            {planta_baixa?.data?.attributes?.formats?.thumbnail && (
+              <img
+                src={`${API_BASE_URL}${planta_baixa.data.attributes.formats.thumbnail.url}`}
+                alt="Planta Baixa"
+              />
+            )}
           </ContainerPlanta>
           <ContainerDescription>
             <ContainerSobre>
@@ -112,7 +125,10 @@ export default function EmpreendimentoInterna() {
             <ContainerIcons>
               {infraestruturas.map((imagem, index) => (
                 <div className="styleIcons" key={index}>
-                  <img src={`${API_BASE_URL}${imagem.attributes.imagem_infra.data.attributes.url}`} alt={`Imagem ${index + 1}`} />
+                  <img
+                    src={`${API_BASE_URL}${imagem.attributes.imagem_infra.data.attributes.url}`}
+                    alt={`Imagem ${index + 1}`}
+                  />
                   <p>{imagem.attributes.titulo}</p>
                 </div>
               ))}
@@ -120,8 +136,12 @@ export default function EmpreendimentoInterna() {
           </ContainerDescription>
         </SectionDescription>
         <SectionGalery>
-          {galeria_empreendimento && galeria_empreendimento.data && galeria_empreendimento.data.map((imagem, index) => (
-            <img key={index} src={`${API_BASE_URL}${imagem.attributes.formats.large.url}`} alt={`Imagem ${index + 1}`} />
+          {galeria_empreendimento?.data?.map((imagem, index) => (
+            <img
+              key={index}
+              src={`${API_BASE_URL}${imagem.attributes.formats.thumbnail.url}`}
+              alt={`Imagem ${index + 1}`}
+            />
           ))}
         </SectionGalery>
         <div style={{ height: '60vh', width: '100%' }}>
@@ -144,3 +164,4 @@ export default function EmpreendimentoInterna() {
 
   return null;
 }
+
