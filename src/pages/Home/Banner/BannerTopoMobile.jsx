@@ -7,9 +7,9 @@ export default function BannerTopoMobile() {
   const [bannerData, setBannerData] = useState(null);
 
   useEffect(() => {
-    api.get("/api/banner-topos/1/?populate=*")
+    api.get("api/banner-topos/1/?populate=*")
       .then(console.log)
-    api.get("/api/banner-topos/1/?populate=*")
+    api.get("api/banner-topos/1/?populate=*")
       .then(response => response.data.attributes)
       .then(setBannerData)
       .catch(console.error);
