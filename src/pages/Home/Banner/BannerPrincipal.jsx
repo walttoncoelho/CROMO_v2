@@ -10,9 +10,10 @@ export default function BannerPrincipal() {
   useEffect(() => {
     api.get("/api/banner-topos/1/?populate=*")
       .then(console.log)
-      // .then(response => response.data.attributes)
-      // .then(setBannerData)
-      // .catch(console.error);
+    api.get("/api/banner-topos/3/?populate=*")
+      .then(response => response.data.attributes)
+      .then(setBannerData)
+      .catch(console.error);
   }, []);
 
   if (!bannerData) {
