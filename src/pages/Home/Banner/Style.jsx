@@ -10,6 +10,7 @@ margin: auto;
 width:100%;
 max-width: 1920px;
 justify-content: center;
+margin-bottom: 40px;
 
 img{
     width: 100%;

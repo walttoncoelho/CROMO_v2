@@ -99,9 +99,9 @@ export default function EmpreendimentoInterna() {
       </ContainerHeader>
         <SectionDescription>
           <ContainerPlanta>
-            {planta_baixa?.data?.attributes?.formats?.thumbnail && (
+            {planta_baixa?.data?.attributes?.formats?.small && (
               <img
-                src={`${API_BASE_URL}${planta_baixa.data.attributes.formats.thumbnail.url}`}
+                src={`${API_BASE_URL}${planta_baixa.data.attributes.formats.small.url}`}
                 alt="Planta Baixa"
               />
             )}
