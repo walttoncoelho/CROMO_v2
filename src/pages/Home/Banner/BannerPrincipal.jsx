@@ -10,7 +10,7 @@ export default function BannerPrincipal() {
   useEffect(() => {
     const cacheImages = (data) => {
       const { banner_desktop } = data;
-      const desktopImage = banner_desktop.data.attributes.formats.small;
+      const desktopImage = banner_desktop.data.attributes.formats.large;
       const imageUrl = `${API_BASE_URL}${desktopImage.url}`;
 
       // Verifica se a imagem já está em cache
@@ -41,7 +41,7 @@ export default function BannerPrincipal() {
   }
 
   const { banner_desktop } = bannerData;
-  const desktopImage = banner_desktop.data.attributes.formats.small;
+  const desktopImage = banner_desktop.data.attributes.formats.large;
   const imageUrl = `${API_BASE_URL}${desktopImage.url}`;
 
   return (
