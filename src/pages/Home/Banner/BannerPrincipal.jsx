@@ -2,16 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { ContainerBanner } from './Style';
 import BtnExplorar from './ButtonExplorar/BtnExplorar';
 import { API_BASE_URL } from '../../../data/api/api';
-import api from '../../../services/api';
 
 export default function BannerPrincipal() {
   const [bannerData, setBannerData] = useState(null);
 
   useEffect(() => {
-    api.get("api/banner-topos/1/?populate=*")
-      .then(console.log)
-    api.get("api/banner-topos/1/?populate=*")
-      .then(response => response.data.attributes)
+    fetch(`${API_BASE_URL}/api/banner-topos/1/?populate=*`)
+      .then(response => response.json())
+      .then(json => json.data.attributes)
       .then(setBannerData)
       .catch(console.error);
   }, []);
