@@ -44,7 +44,7 @@ export function CardEmpreend() {
                 alt={attributes.capa_home.data.attributes.altText ?? "Imagem do empreendimento"}
               />
             )}
-            {attributes.completamenteVendido && (
+            {attributes.vendido && (
               <img
                 className={"selo"}
                 src={"../images/selo-100-porcento-vendido.png"}

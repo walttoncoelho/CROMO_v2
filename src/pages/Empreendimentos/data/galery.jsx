@@ -42,13 +42,7 @@ export function CardEmpreend() {
                   alt={empreendimentoAttributes.capa_home?.data?.attributes?.altText ?? "Imagem do empreendimento"}
                 />
               )}
-              {empreendimentoAttributes.completamenteVendido && (
-                <img
-                  className={"selo"}
-                  src={"../images/selo-100-porcento-vendido.png"}
-                  alt={"Empreendimento Completamente Vendido"}
-                />
-              )}
+            
               <ContainerStatus
                 className={
                   empreendimentoAttributes.status_construcao === "Obra entregue" ? "green" : "orange"
@@ -58,7 +52,14 @@ export function CardEmpreend() {
               </ContainerStatus>
             </CardImg>
             <CardDescription>
-              <img class={"selo"} src={"../images/selo-100-porcento-vendido.png"} alt={"Empreendimento Completamente Vendido"} />
+              {/* <img class={"selo"} src={"../images/selo-100-porcento-vendido.png"} alt={"Empreendimento Completamente Vendido"} /> */}
+              {empreendimentoAttributes.vendido && (
+                <img
+                  className={"selo"}
+                  src={"../images/selo-100-porcento-vendido.png"}
+                  alt={"Empreendimento Completamente Vendido"}
+                />
+              )} 
               <h2>{empreendimentoAttributes.titulo}</h2>
               <p>{empreendimentoAttributes.descricao}</p>
               <br />
