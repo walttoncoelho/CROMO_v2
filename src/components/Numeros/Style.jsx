@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const ContainerNumeros = styled.div`
 
 @media (max-width: 550px) {
-margin-left: 3px;
-max-width: 350px;
-h2{
+    margin-left: 3px;
+    max-width: 350px;
+    h2{
 }
 }
 
@@ -13,6 +13,7 @@ display: flex;
 margin: auto;
 width:100%;
 max-width: 1200px;
+justify-content: flex-start;
 ;
 `
 
@@ -32,7 +33,8 @@ width: 350px;
 flex-direction: row;
 display: flex;
 margin: auto;
-flex-wrap: wrap;
+
+
 ;
 `
 

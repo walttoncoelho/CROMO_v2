@@ -4,7 +4,7 @@ import { BlocoNumbers, ContainerNumeros, StyleNumbers } from "./Style";
 export default function NumerosBloco({ numerosIniciais }) {
 
   const [lotes, setLotes] = useState(0);
-  const [asfalto, setAsfalto] = useState(0);
+/*   const [asfalto, setAsfalto] = useState(0); */
   const [rua, setRua] = useState(0);
   const [familias, setFamilias] = useState(0);
 
@@ -15,11 +15,11 @@ export default function NumerosBloco({ numerosIniciais }) {
         const increment = diff < 10 ? diff : Math.ceil(diff / 10);
         return prevLotes + increment;
       });
-      setAsfalto((prevAsfalto) => {
+/*       setAsfalto((prevAsfalto) => {
         const diff = numerosIniciais.asfalto - prevAsfalto;
         const increment = diff < 10 ? diff : Math.ceil(diff / 10);
         return prevAsfalto + increment;
-      });
+      }); */
       setRua((prevRua) => {
         const diff = numerosIniciais.rua - prevRua;
         const increment = diff < 10 ? diff : Math.ceil(diff / 10);
@@ -42,10 +42,10 @@ export default function NumerosBloco({ numerosIniciais }) {
           <h1>+{lotes}</h1>
           <p>lotes vendidos</p>
         </StyleNumbers>
-        <StyleNumbers>
+{/*         <StyleNumbers>
           <h1>+{asfalto}Km</h1>
           <p>de asfalto</p>
-        </StyleNumbers>
+        </StyleNumbers> */}
         <StyleNumbers>
           <h1>+{rua}</h1>
           <p>casas construidas</p>
