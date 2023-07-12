@@ -8,7 +8,7 @@ import {
   ContainerLoteButton,
   ContainerStatus
 } from "../Style";
-import "./styles.css"; // importa o arquivo CSS
+import "./styles.css";
 import { ButtonSaibaMais } from "../../../components/Bottons/Bottons";
 
 export function CardEmpreend() {
@@ -32,6 +32,9 @@ export function CardEmpreend() {
         const { attributes: empreendimentoAttributes, id } = attributes;
         const capaHomeUrl = empreendimentoAttributes.capa_home?.data?.attributes?.url;
 
+        // Acrescentando a regra de negócio para ocultar a tag <p> quando a quantidade_lote e a area_lote forem 0
+        const shouldHideLoteInfo = empreendimentoAttributes.quantidade_lote === 0 && empreendimentoAttributes.area_lote === 0;
+
         return (
           <CardGalery key={id}>
             <CardImg>
@@ -52,7 +55,6 @@ export function CardEmpreend() {
               </ContainerStatus>
             </CardImg>
             <CardDescription>
-              {/* <img class={"selo"} src={"../images/selo-100-porcento-vendido.png"} alt={"Empreendimento Completamente Vendido"} /> */}
               {empreendimentoAttributes.vendido && (
                 <img
                   className={"selo"}
@@ -64,9 +66,11 @@ export function CardEmpreend() {
               <p>{empreendimentoAttributes.descricao}</p>
               <br />
               <ContainerLoteButton>
-                <p>
-                  <strong>{empreendimentoAttributes.quantidade_lote}</strong> Lotes com até <strong>{empreendimentoAttributes.area_lote}</strong>
-                </p>
+                {!shouldHideLoteInfo && (
+                  <p>
+                    <strong>{empreendimentoAttributes.quantidade_lote}</strong> Lotes com até <strong>{empreendimentoAttributes.area_lote}</strong>
+                  </p>
+                )}
                 <br />
                 <ButtonSaibaMais id={id}>
                   <a
