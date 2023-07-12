@@ -143,19 +143,20 @@ export const CardImg = styled.div`
 
 export const CardDescription = styled.div`
 
+
 @media (max-width: 550px){
   display: flex;
   margin: auto;
   justify-content: center;
-
-
+  
+  
   
 }
 
 display: flex;
 flex-direction: column;
 margin: auto;
-max-width: 350px;
+max-width: 450px;
 
 h2{
   @media (max-width: 550px){
