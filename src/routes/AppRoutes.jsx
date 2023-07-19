@@ -33,12 +33,15 @@ import EditaNumeros from "../pages/Manager/Conteudo/Numeros/EditaNumeros/EditaNu
 import ListaContatos from "../pages/Manager/Conteudo/Contatos/ListaContatos/ListaContatos";
 import ProtectedRoute from "./ProtectedRoute";
 
+import Erro404 from "../pages/Erro404/Erro404";
+
 
 export function AppRoutes() {
   return (
     /* Páginas públicas */
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Erro404/>}/>
+  {/*     <Route path="/" element={<Home />} /> */}
       <Route path="/home" element={<Home />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/empreendimentos" element={<Empreendimentos />} />
